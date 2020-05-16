@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-import { filterDate } from "../../assets/date";
+import { filterDate } from "../../utils/date";
 
 am4core.useTheme(am4themes_animated);
 
@@ -14,6 +14,7 @@ class LineChart extends Component {
     let chart = am4core.create("chartdiv", am4charts.XYChart);
     let data = [];
     const filtered = filterDate(networth, 1);
+    console.log(filtered)
     for (let e of filtered) {
       let date = e.traded_on;
       let value = e.net_worth;

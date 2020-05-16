@@ -9,7 +9,7 @@ a.link {
     text-decoration: none;
   }
 }
-* {
+*,*::before,*::after {
   box-sizing: border-box;
 }
 
@@ -86,10 +86,6 @@ a.link {
 
 ///landing page
 
-* {
-  box-sizing: border-box;
-}
-
 .wrapper {
   display: -webkit-box;
   display: flex;
@@ -97,9 +93,6 @@ a.link {
   justify-content: center;
   position: absolute;
   top: 50%;
-}
-* {
-  box-sizing: border-box;
 }
 
 .card {
@@ -124,6 +117,7 @@ a.link {
         transform: scale(1.5);
         color: #fff;
         margin-left: 3.5rem;
+        margin-top: 1rem;
       }
     }
   }
@@ -195,7 +189,7 @@ a.link {
 }
 .card .info p {
   letter-spacing: 1px;
-  font-size: 13px;
+  font-size: .85rem;
   font-weight: 100;
   margin-top: 8px;
 }
