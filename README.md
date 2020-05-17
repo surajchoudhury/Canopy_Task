@@ -11,4 +11,5 @@ The app is hosted on [Netlify](https://canopy-task.netlify.app)
 * npm install
 * npm start
 
-Live Preview **[Canopy-Task](https://github.com/itzsunny/Canopy_Task/blob/master/ss_canopy_2.gif?raw=true)**
+Live Preview ![Canopy-Task](https://github.com/itzsunny/Canopy_Task/blob/master/ss_canopy_2.gif?raw=true)
+
