@@ -13,6 +13,7 @@ const styles = (theme) => ({
     backgroundColor: "#F2F5FA",
     color: "#ABBDD6",
     borderRadius: "50%",
+    cursor: "pointer",
     transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
@@ -23,6 +24,7 @@ const styles = (theme) => ({
     color: "#fff",
     backgroundColor: "#6658FC",
     fontSize: "20px",
+    cursor: "pointer",
   },
 });
 
