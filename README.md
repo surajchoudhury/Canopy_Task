@@ -1,4 +1,4 @@
-The app is hosted on [Netlify]()
+The app is hosted on [Netlify](https://canopy-task.netlify.app)
 
 ## Canopy Task
 
