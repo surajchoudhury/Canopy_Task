@@ -40,7 +40,14 @@ class TableGroup extends Component {
   };
 
   assignClassName = (data) => {
-    return data ? "" : "no_data";
+    let val = data && JSON.stringify(data);
+    return val && !val.startsWith("-") && !val.startsWith("+")
+      ? ""
+      : val && val.startsWith("-")
+      ? "dec"
+      : val && val.startsWith("+")
+      ? "inc"
+      : "no_data";
   };
 
   assignName = (name) => {
