@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app is hosted on [Netlify]()
 
 ## Canopy Task
 
@@ -6,3 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * A navigation layout to reach out other two pages
 * Networth line-chart
 * Holding Tables
+
+### Run App
+* npm install
+* npm start
