@@ -71,7 +71,10 @@ class TableGroup extends Component {
                 onClick={() => this.handleExpandClick(key)}
               />
 
-              <h2 className="group_title">
+              <h2
+                className="group_title"
+                onClick={() => this.handleExpandClick(key)}
+              >
                 {key} ({groups[key].length})
               </h2>
             </CardActions>
