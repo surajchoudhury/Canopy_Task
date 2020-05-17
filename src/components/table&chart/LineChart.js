@@ -14,7 +14,6 @@ class LineChart extends Component {
     let chart = am4core.create("chartdiv", am4charts.XYChart);
     let data = [];
     const filtered = filterDate(networth, 1);
-    console.log(filtered)
     for (let e of filtered) {
       let date = e.traded_on;
       let value = e.net_worth;
