@@ -34,9 +34,11 @@ class TableGroup extends Component {
     this.state = { holdings: this.props.data, expanded: {} };
   }
   handleExpandClick = (key) => {
+    
     let state = { ...this.state };
-    state.expanded[key] = !!!state.expanded[key];
+    state.expanded[key] = !state.expanded[key];
     this.setState(state);
+
   };
 
   assignClassName = (data) => {
@@ -104,8 +106,8 @@ class TableGroup extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {groups[key].map((row) => (
-                    <tr className="table_row" key={row.ticker}>
+                  {groups[key].map((row,i) => (
+                    <tr className="table_row" key={`${i}${row.ticker}`}>
                       <td>{row.name}</td>
                       <td>{row.ticker}</td>
                       <td className={this.assignClassName(row.avg_price)}>
