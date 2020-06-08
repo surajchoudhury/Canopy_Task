@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { GiChart } from "react-icons/gi";
 import { AiOutlineTable } from "react-icons/ai";
 import { MdHome } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
+import ThemeToggler from "./ThemeToggler";
+import { ThemeContext } from "../App";
+import AppTheme from "./AppThems";
 
 const Header = (props) => {
   const {
@@ -12,16 +15,31 @@ const Header = (props) => {
     },
   } = props;
 
+  const { theme } = useContext(ThemeContext);
+  const headerStyle = AppTheme[theme];
+
   return (
-    <header className={pathname === "/" ? "header" : "header_2"}>
+    <header
+      className={
+        pathname === "/"
+          ? theme === "light"
+            ? "header-light"
+            : "header-dark"
+          : theme === "light"
+          ? "header_2-light"
+          : "header_2-dark"
+      }
+      style={headerStyle}
+    >
       <div className="brand-box">
         <span>
           <Link to="/">
             <MdHome className="brand" />
           </Link>
         </span>
+        <ThemeToggler />
       </div>
-      <div className="brandbox_2">
+      <div className="brandbox_2" title="Switch View">
         {pathname === "/holdings" ? (
           <Link to="/networth">
             <GiChart className="brand_2" />
